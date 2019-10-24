@@ -6,10 +6,10 @@ from matplotlib import pyplot as plt
 '''
 class Generator:
     MEAN_ONE = [1, 1]   # 第一类数据点的均值
-    MEAN_TWO = [4, 4]   # 第二类数据点的均值
+    MEAN_TWO = [4.5, 4.5]   # 第二类数据点的均值
     COV = [[1, 0.05], [0.05, 1]]  # 两类样本的协方差矩阵（相同的）
 
-    def __init__(self, NUM_ONE=15, NUM_TWO=20):
+    def __init__(self, NUM_ONE=30, NUM_TWO=50):
         self.NUM_ONE = NUM_ONE    # 第一类样本数
         self.NUM_TWO = NUM_TWO    # 第二类样本数
 
