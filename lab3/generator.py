@@ -5,11 +5,11 @@ from matplotlib import pyplot as plt
 生成数据
 '''
 class Generator:
-    MEAN = np.array([[0.5, 0.5], [5.5, 5.5], [4, 1], [10, 10], [10, 5], [1, 10], [6, 10], [1, 5], [10, 1]])  # 各个类的均值
+    MEAN = np.array([[-1, -1], [5.5, 5.5], [4, -1], [11, 11], [10, 5], [1, 10], [6, 12], [-1, 5], [10, -0.5]])  # 各个类的均值
     COL = ['lime', 'darkviolet', 'forestgreen', 'orange', 'yellow', 'gray', 'blue', 'red', 'black']          # 各类的颜色
  
     def __init__(self, k=3, NUM=20):
-        self.k = k                 # 生成训练数据的类别数
+        self.k = min(k, 9)                 # 生成训练数据的类别数
         self.NUM = NUM             # 每个类别的数目  
 
     # 高斯分布产生 k 个高斯分布的数据（不同均值和方差）
@@ -40,6 +40,6 @@ class Generator:
 
 if __name__ == "__main__":
     k = 9
-    generator = Generator(k)
-    x, y = generator.data_generator()
-    generator.draw()
+    gen = Generator(k)
+    x, y = gen.data_generator()
+    gen.draw()
