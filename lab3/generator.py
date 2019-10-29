@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 生成数据
 '''
 class Generator:
-    MEAN = np.array([[-1, -1], [5.5, 5.5], [4, -1], [11, 11], [10, 5], [1, 10], [6, 12], [-1, 5], [10, -0.5]])  # 各个类的均值
+    MEAN = np.array([[-4, -4], [6, 6], [4, -6], [14, 16], [15, 7], [-3, 10], [15, -8], [-9, 3], [12, -2]])  # 各个类的均值
     COL = ['lime', 'darkviolet', 'forestgreen', 'orange', 'yellow', 'gray', 'blue', 'red', 'black']          # 各类的颜色
  
     def __init__(self, k=3, NUM=20):
